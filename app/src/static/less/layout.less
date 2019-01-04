@@ -1,0 +1,73 @@
+@button-size: 50px;
+@button-color: white;
+@button-background-color: #00695C;
+
+body {
+    margin: auto;
+    height: 100vh;
+
+    .layout-header {
+        background-color: white;
+        height: 55px;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.6);
+        -webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.6);
+        -moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.6);
+
+        .heading-content {
+            margin: auto;
+            font-size: 24px;
+            padding-left: 30px;
+        }
+
+        .search,
+        .menu {
+            padding-top: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .layout-content {
+        height: 100%;
+        padding-top: 60px;
+        margin: auto;
+    }
+
+    .action-area {
+        position: fixed;
+        right: 15px;
+        bottom: 60px;
+        width: 50px;
+        text-align: right;
+
+        .action-wrapper {
+            button {
+                background-color: @button-background-color;
+                height: @button-size;
+                width: @button-size;
+                border-radius: @button-size / 2;
+   
+            }
+            button::before {
+                content:  "";
+                position: absolute;
+                background-color: @button-color;
+                width: 30px;
+                height: 5px;
+                left: 10px;
+                top: 24.35px;
+            }
+            button::after {
+                content: "";
+                position: absolute;
+                background-color: @button-color;
+                width: 5px;
+                height: 30px;
+                left: 22.5px;
+                bottom: 11.84px;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+body {
+  margin: auto;
+  height: 100vh;
+}
+body .layout-header {
+  background-color: white;
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.6);
+}
+body .layout-header .heading-content {
+  margin: auto;
+  font-size: 24px;
+  padding-left: 30px;
+}
+body .layout-header .search,
+body .layout-header .menu {
+  padding-top: 15px;
+  padding-right: 15px;
+}
+body .layout-content {
+  height: 100%;
+  padding-top: 60px;
+  margin: auto;
+}
+body .action-area {
+  position: fixed;
+  right: 15px;
+  bottom: 60px;
+  width: 50px;
+  text-align: right;
+}
+body .action-area .action-wrapper button {
+  background-color: #00695C;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+body .action-area .action-wrapper button::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 30px;
+  height: 5px;
+  left: 10px;
+  top: 24.35px;
+}
+body .action-area .action-wrapper button::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 5px;
+  height: 30px;
+  left: 22.5px;
+  bottom: 11.84px;
+}
