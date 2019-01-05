@@ -1,6 +1,14 @@
 version: "2"
 services:
 
+  mysql:
+    build: ./mysql/
+    volumes:
+      - ./mysql/mysql_data:/var/lib/mysql
+      - ./mysql/sqls:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=hogehoge
+
   uwsgi:
     build: ./app
     volumes:
@@ -9,6 +17,8 @@ services:
       - "3031:3031"
     environment:
       TZ: "Asia/Tokyo"
+    links:
+      - mysql
 
   nginx:
     build: ./nginx
